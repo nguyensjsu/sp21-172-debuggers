@@ -25,8 +25,8 @@ class StarbucksOrder {
     private @Id @GeneratedValue Long id;
 
     @Column(nullable=false)     private String drink;
+    @Column(nullable=false)     private String size;
     @Column(nullable=false)     private String milk;
-    @Column(nullable=false)     private boolean activated;
     @Column(nullable=false)     private double total;
                                 private String status;
 }
