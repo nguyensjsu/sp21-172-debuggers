@@ -1,1 +1,4 @@
-
+# Johnny Vu Week 1 Journal
+Our group didn't have our first meeting until Wednesday, so we couldn't get too much done together. Like every team, we had some trouble with our communication but we eventually all got together and had a meeting. We spent most of our meeting talking about the assignment and getting everyone more familiar with what we had to do. We read through the requirements and decided on which part we would work on. We decided on initially working by ourselves on our specific parts instead of everyone working together at one time. We have conflicting schedules so I believe this will help out instead of forcing everyone to meet at a certain time and day. The part I chose to work on is the working database that stores the user's inputted data, as shown below.
+![image](https://user-images.githubusercontent.com/48967091/115803216-4d768680-a395-11eb-80ad-9f89e5763a95.png)
+As of right now, we don't currently have too much so I decided to work on making databases through MySQL and trying to make sure everything is working as intended. I will be using Lab 7 as a base to input my data and hopefully get the data onto a working database.
