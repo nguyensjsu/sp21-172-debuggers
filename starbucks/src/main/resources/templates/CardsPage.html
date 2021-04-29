@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.head{
+				margin: 1.25rem 3.125rem;
+				width: 31.25rem;
+				height: 5rem;
+			}
+			.head li{
+				float: left;
+				list-style: none;
+			}
+			.head li img{
+				display: block;
+				height: 5rem;
+				width: 5rem;
+			}
+			.head li a{
+				display: block;
+				width: 6.25rem;
+				height: 5rem;
+				text-align: center;
+				text-decoration: none;
+				line-height: 5rem;
+				color: black;
+				font-size: 1.25rem;
+				padding-left: 1.5625rem;
+			}
+			.head li a:hover{
+				color: #00a862;
+			}
+			
+			.view1{
+				display: block;
+				width: 18.75rem;
+				position: absolute;
+				left: 8.75rem;
+				top: 25rem;
+				
+			}
+			.view1 li{
+				list-style: none;
+			}
+			.view1 b{
+				display: block;
+				margin-bottom: 1.25rem;
+				font-size: 1.5625rem;
+			}
+			.view1 li a{
+				display: block;
+				width: 6.25rem;
+				height: 3.125rem;
+				text-align: left;
+				text-decoration: none;
+				color: gray;
+			}
+			.view1 li a:hover{
+				color: #00a862;
+			}
+			
+			.newCard{
+				display: none;
+				width: 71.875rem;
+				height: 50.9375rem;
+				position: absolute;
+				right:0;
+				top: 7.5625rem;
+				border-left: #e2e2e2 solid 0.0625rem;
+				background-color: #f7f7f7;
+			}
+			.newCard .text{
+				width: 30.625rem;
+				height: 5rem;
+				position: absolute;
+				left: 18.75rem;
+				top: 10rem;
+			}
+			.newCard .text p{
+				font-weight:bold;
+				font-family:Sans-serif;
+			}
+			.newCard img{
+				height: 17.5rem;
+				width: 30.625rem;
+				position: absolute;
+				bottom: 17.5rem;
+				left: 18.75rem;
+			}
+			.newCard form{
+				text-align: center;
+				width: 25rem;
+				height: 9.375rem;
+				font-size: 0.9375rem;
+				position: absolute;
+				left: 25.625rem;
+				top: 17.5rem;
+			}
+			.newCard input{
+				width: 18.75rem;
+				height: 3.125rem;
+				font-size: 0.9375rem;
+				border: none;
+				border-bottom: 0.125rem solid black;
+				outline: none;
+				background-color: transparent;
+				margin-bottom: 1.25rem;
+			}
+			.newCard .btn{
+				font-family: Noto Sans, sans-serif;
+				width: 9.375rem;
+				height: 3.125rem;
+				background-color: #00a862;
+				border: none;
+				border-radius:3.125rem;
+				font-size:1.25rem;
+				font-weight:bold;
+				color: white;
+				position: absolute;
+				bottom: 1.25rem;
+				right:1.875rem;
+			}
+			
+			.showCard{
+				font-family: Courier New, monospace;
+				display: block;
+				width: 71.875rem;
+				height: 50.9375rem;
+				position: absolute;
+				right:0;
+				top: 7.5625rem;
+				border-left: #e2e2e2 solid 0.0625rem;
+				background-color: #f7f7f7;
+			}
+			.showCard img{
+				position: absolute;
+				top: 8.75rem;
+				left: 19.375rem;
+			}
+			.showCard h1{
+				position: absolute;
+				top: 5.625rem;
+				left: 20.5rem;
+				font-size: 45px;
+			}
+			.showCard a{
+				position: absolute;
+				top: 6.9rem;
+				left: 47.3rem;
+				font-weight:bold;
+				text-decoration: none;
+				color: darkgreen;
+				font-family: Comic Sans MS, Comic Sans, cursive;
+				font-size: 1.25rem;
+			}
+			.showCard .btn1{
+				position: absolute;
+				bottom: 12rem;
+				left: 20.9rem;
+				width: 14rem;
+				height: 8rem;
+				border-radius: 0.9375rem;
+				border: dashed #808080 0.05rem;
+			}
+			.btn2{
+				font-family: Noto Sans, sans-serif;
+				width: 9.375rem;
+				height: 3.125rem;
+				background-color: #00a862;
+				border: none;
+				border-radius:3.125rem;
+				font-size:1.25rem;
+				font-weight:bold;
+				color: white;
+				position: absolute;
+				bottom: 1.25rem;
+				right:1.875rem;
+			}
+			
+			.view2{
+				display: none;
+				width: 25rem;
+				height: 18.75rem;
+				line-height: 18.75rem;
+				position: absolute;
+				left: 8.75rem;
+				top: 21.875rem;
+			}
+			
+			.payment{
+				font-family: Courier New, monospace;
+				display: none;
+				width: 71.875rem;
+				height: 50.9375rem;
+				position: absolute;
+				right:0;
+				top: 7.5625rem;
+				border-left: #e2e2e2 solid 0.0625rem;
+				background-color: #f7f7f7;
+			}
+			.payment form{
+				display: block;
+				width: 50rem;
+				height: 25rem;
+				text-align: left;
+				position: absolute;
+				top: 6rem;
+				left: 17rem;
+			}
+			.payment form p{
+				margin-bottom: 2rem;
+				font-weight:bold;
+				font-size: 1.125rem;
+			}
+			.payment input{
+				height: 30px;
+				outline-style: none ;
+				border: 0px;
+				font-size: 20px;
+			}
+			.payment .btn{
+				text-align: center;
+				font-family: Noto Sans, sans-serif;
+				width: 12em;
+				height: 3.125rem;
+				background-color: #00a862;
+				border: none;
+				border-radius:3.125rem;
+				font-size:1.25rem;
+				font-weight:bold;
+				color: white;
+				position: absolute;
+				bottom: 5rem;
+				left: 25rem;
+			}
+			
+			.manageCard{
+				font-family: Courier New, monospace;
+				display: none;
+				width: 71.875rem;
+				height: 50.9375rem;
+				position: absolute;
+				right:0;
+				top: 7.5625rem;
+				border-left: #e2e2e2 solid 0.0625rem;
+				background-color: #f7f7f7;
+			}
+			.manageCard h1{
+				position: absolute;
+				top: 5.625rem;
+				left: 20.5rem;
+				font-size: 45px;
+			}
+			.manageCard .i1{
+				position: absolute;
+				top: 8.75rem;
+				left: 19.375rem;
+			}
+			.list{
+				display: block;
+				width: 18.75rem;
+				height: 12.5rem;
+				position: absolute;
+				top: 31.25rem;
+				left: 20.9375rem;
+			}
+			.list .i2{
+				width: 2.0625rem;
+				height: 2.0625rem;
+				position: relative; top: 7px;
+			}
+			.list .btn{
+				text-align: left;
+				width: 14rem;
+				height: 2.0625rem;
+				font-size: 1.5rem;
+				background-color:transparent;
+				border-style:none;
+			}
+			
+
+		</style>
+		
+		<script type="text/javascript">
+			function sPay(){
+				var sh = document.getElementById("show");
+				var act = document.getElementById("active");
+				var view1 = document.getElementById("view1");
+				var view2 = document.getElementById("view2");
+				var payment = document.getElementById("payment");
+				var manage = document.getElementById("manage");
+				sh.style.display = "block";
+				view1.style.display = "block";
+				act.style.display = "none";
+				view2.style.display = "none";
+				payment.style.display = "none";
+				manage.style.display = "none";
+			}
+			function sAdd(){
+				var sh = document.getElementById("show");
+				var act = document.getElementById("active");
+				var view1 = document.getElementById("view1");
+				var view2 = document.getElementById("view2");
+				var payment = document.getElementById("payment");
+				var manage = document.getElementById("manage");
+				act.style.display = "block";
+				view1.style.display = "block";
+				sh.style.display = "none";
+				view2.style.display = "none";
+				payment.style.display = "none";
+				manage.style.display = "none";
+			}
+			function sPayment(){
+				var sh = document.getElementById("show");
+				var act = document.getElementById("active");
+				var view1 = document.getElementById("view1");
+				var view2 = document.getElementById("view2");
+				var payment = document.getElementById("payment");
+				var manage = document.getElementById("manage");
+				act.style.display = "none";
+				view1.style.display = "none";
+				sh.style.display = "none";
+				view2.style.display = "block";
+				payment.style.display = "block";
+				manage.style.display = "none";
+			}
+			function sManage(){
+				var sh = document.getElementById("show");
+				var act = document.getElementById("active");
+				var view1 = document.getElementById("view1");
+				var view2 = document.getElementById("view2");
+				var payment = document.getElementById("payment");
+				var manage = document.getElementById("manage");
+				act.style.display = "none";
+				view1.style.display = "block";
+				sh.style.display = "none";
+				view2.style.display = "none";
+				payment.style.display = "none";
+				manage.style.display = "block";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="head">
+			<ul>
+				<li><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png" /></li>
+				<li> <a href="#"><b style="font-family:Sans-serif">Order</b></a> </li>
+				<li> <a href="#" onclick="sPay()"><b style="font-family:Sans-serif">Cards</b></a> </li>
+			</ul>
+		</div>
+		
+		<hr/>
+		<div class="Cards" id="cards">
+			<div class="view1" id="view1">
+				<ul>
+					<li><h1 style="font-family:Sans-serif; margin-bottom: 20px;">Startbucks Card</h1></li>
+					<li> <a href="#" onclick="sPay()"><b style="font-size:20px; font-family:Sans-serif">Pay</b></a> </li>
+					<li> <a href="#" onclick="sAdd()"><b style="font-size:20px; font-family:Sans-serif">Add</b></a> </li>
+				</ul>			
+			</div>
+			
+			<div class="newCard" id="active">
+				<div class="text">
+					<p>
+						ADD A STARBUCKS CARD
+					</p>
+					<br />
+					<p>
+						Add a Starbucks Card to order ahead, pay in store, and earn Rewards.
+					</p>
+				</div>
+				<img src="img/card.png" />
+				<form method="get">
+					<p>
+					<input type="text" required="required" id="cardNumber" placeholder="Starbucks Card Number" />
+					</p >
+				
+					<p>
+					<input type="text" required="required" id="cardCode" placeholder="Security Code" />
+					</p >
+				</form>
+				<input class="btn" id="add" type="submit" value="Add Card"/>
+			 </div>
+			 
+			 <div class="showCard" id="show">
+				 <h1>$0.00</h1>
+				 <a href="#" onclick="sManage()">Manage</a>
+				 <img src="img/show.png" />
+				 <input class="btn1" type="button" value="+ Add Card" onclick="sAdd()"/>
+				 <input class="btn2" type="button" value="Add Money" onclick="sPayment()"/>
+				 
+			 </div>
+		</div>
+		
+		<div class="view2" id="view2">
+			<h1>Add Payment Method</h1>
+		</div>
+		
+		<div class="payment" id="payment">
+			<form method="get">
+				<p>
+					Starbucks Card Number:
+					<select>
+						<option>12345</option>
+
+					</select>
+					Load this Amount:
+					<select>
+						<option>$10</option>
+						<option>$20</option>
+						<option>$30</option>
+						<option>$40</option>
+						<option>$50</option>
+					</select>
+				</p >
+				<p>
+					First Name:<input type="text" required="required" id="fn" />
+					Last Name:<input type="text" required="required" id="ln" />
+				</p >
+				<p>
+					<p style="margin-bottom: 0;">Address:</p>
+					<textarea style="OVERFLOW:hidden; width: 31.25rem; height: 4rem; font-size: 20px;" id="adr" required="required"></textarea>
+				</p >
+				<p>
+					City:<input type="text" required="required" id="city" />
+					State:<input type="text" required="required" id="state" />
+				</p >
+				<p>
+					Zip:<input type="text" required="required" id="zip" />
+					Phone Number:<input type="text" required="required" id="pn" placeholder="(xxx) xxx-xxxx"/>
+				</p >
+				<p>
+					Credit Card Number:<input type="text" required="required" id="cn" placeholder="xxxx-xxxx-xxxx-xxxx"/>
+				</p >
+				<p>
+					Exp Month:<input type="text" required="required" id="em" style="width: 2rem;" />
+					Exp Year:<input type="text" required="required" id="ey" style="width: 4rem;"/>
+					CVV:<input type="text" required="required" id="cvv" style="width: 4rem;"/>
+				</p >
+				<p style="margin-bottom: 0;">
+					Email:<input type="text" required="required" id="email" />
+				</p >
+			</form>
+			<input class="btn" type="submit" value="Submit Your Payment" onclick="sPay()"/>
+		</div>
+		
+		<div class="manageCard" id="manage">
+			<h1>$0.00</h1>
+			<img class="i1" src="img/show.png"/>
+			<div class="list">
+				<h2>Card Number</h2>
+				<p style="margin-bottom: 1.25rem; font-size: 1.5rem;">12345</p>
+				<img class="i2" src="img/remove.png" />
+				<input class="btn" type="submit" value="Remove" style="margin-bottom: 1.25rem;"/>
+				<br />
+				<img class="i2" src="img/report.png"/>
+				<input class="btn" type="submit" value="Report lost or stolen"/>
+			</div>
+			<input class="btn2" type="button" value="Add Money" onclick="sPayment()"/>
+		</div>
+		
+		
+	</body>
+</html>
