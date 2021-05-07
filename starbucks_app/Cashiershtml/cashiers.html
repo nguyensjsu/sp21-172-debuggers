@@ -6,14 +6,19 @@
 </head>
 
 <body>
-<h1 align="center">Starbucks Cashiers App</h1>
 
-<!-- FORM SECTION 
-<form name="form" th:object="${command}" method="post" action="">
 
-  <input type="hidden" name="state" id="state" th:field="*{state}" />
-  <input type="hidden" name="ts" id="ts" th:field="*{timestamp}" />
-  <input type="hidden" name="hash" id="hash" th:field="*{hash}" />
+
+
+<h1 class="colorblock red" align="center">Starbucks Cashiers App</h1>
+
+<!-- FORM SECTION -->
+<form align ="center" name="form" th:object="${command}" method="post" action="">
+	
+
+  
+
+
 
     <p>
     <table id="msg" align="center" style="width:40%">
@@ -25,10 +30,37 @@
         </td>
       </tr>
     </table>
-    </p>-->
+    </p>
+
+
+
+
 
  
     <p align="center"> <img src="Starbucks.jpg" width="200" height="200"/></p>
+    <label for="drink">Drink :</label>
+
+  <input type="text" id="drink" name="drink"><br><br>
+  <label for="Size">Size:</label>
+
+  <input type="text" id="size" name="size"><br><br>
+
+  <label for="milk">Milk:</label>
+
+  <input type="text" id="milk" name="milk"><br><br>
+
+  <label for="total">Total:</label>
+
+  <input type="total" id="total" name="total"><br><br>
+
+  <label for="name">Name:</label>
+  <input type="name" id="name" name="name"><br><br>
+
+
+
+
+
+
 
     <br/>
     <p align="center">
@@ -43,6 +75,9 @@
     </p>
 </form>
 <!-- END FORM SECTION -->
+
+
+
 
 <br/>
 <br/>
