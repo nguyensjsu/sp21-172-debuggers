@@ -1,0 +1,1 @@
+For this week due to midterms and other work I was only able to to update the cashiers html. The Cashiers html can now have the drink name, the type of milk wanted, the name of the customer and the size of the drink
