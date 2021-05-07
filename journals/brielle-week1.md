@@ -3,6 +3,8 @@
 ## What I Worked on This Week
 My goal is to work on the Orders REST API part of the project. I will aim to create a Starbucks Order Class, Controller, and Repository. The REST API is as follows:  
 
+![brielle-week1-card.png]("Weekly cards"/brielle-week1-card.png)
+
 ```
 POST    /order/register/{regid}
         Create a new order. Set order as "active" for register.
