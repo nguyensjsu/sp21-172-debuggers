@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+
+<body>
+
+</body>
+</html>
 	<head>
 		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1" />
 		<title></title>
@@ -421,34 +426,36 @@
 					</select>
 				</p >
 				<p>
-					First Name:<input type="text" required="required" id="fn" />
-					Last Name:<input type="text" required="required" id="ln" />
+					First Name:<input type="text" required="required" id="fn" name="firstname" />
+					Last Name:<input type="text" required="required" id="ln" name="lastname"/>
 				</p >
 				<p>
 					<p style="margin-bottom: 0;">Address:</p>
-					<textarea style="OVERFLOW:hidden; width: 31.25rem; height: 4rem; font-size: 20px;" id="adr" required="required"></textarea>
+					<textarea style="OVERFLOW:hidden; width: 31.25rem; height: 4rem; font-size: 20px;" id="adr" required="required" name="address" ></textarea>
 				</p >
 				<p>
-					City:<input type="text" required="required" id="city" />
-					State:<input type="text" required="required" id="state" />
+					City:<input type="text" required="required" id="city" name="city" />
+					State:<input type="text" required="required" id="state" name="state" />
 				</p >
 				<p>
-					Zip:<input type="text" required="required" id="zip" />
-					Phone Number:<input type="text" required="required" id="pn" placeholder="(xxx) xxx-xxxx"/>
+					Zip:<input type="text" required="required" id="zip" name="zip" />
+					Phone Number:<input type="text" required="required" id="pn" placeholder="(xxx) xxx-xxxx" name="phonenumber" />
 				</p >
 				<p>
-					Credit Card Number:<input type="text" required="required" id="cn" placeholder="xxxx-xxxx-xxxx-xxxx"/>
+					Credit Card Number:<input type="text" required="required" id="cn" placeholder="xxxx-xxxx-xxxx-xxxx" name="cardnumber" />
 				</p >
 				<p>
-					Exp Month:<input type="text" required="required" id="em" style="width: 2rem;" />
-					Exp Year:<input type="text" required="required" id="ey" style="width: 4rem;"/>
-					CVV:<input type="text" required="required" id="cvv" style="width: 4rem;"/>
+					Exp Month:<input type="text" required="required" id="em" style="width: 2rem;" name="expmonth" />
+					Exp Year:<input type="text" required="required" id="ey" style="width: 4rem;" name="expyear" />
+					CVV:<input type="text" required="required" id="cvv" style="width: 4rem;" name="cvv" />
 				</p >
 				<p style="margin-bottom: 0;">
-					Email:<input type="text" required="required" id="email" />
+					Email:<input type="text" required="required" id="email" name="email" />
 				</p >
 			</form>
-			<input class="btn" type="submit" value="Submit Your Payment" onclick="sPay()"/>
+			<p>payment success</p>
+
+			<input class="btn" type="submit" value="Submit Your Payment"/>
 		</div>
 		
 		<div class="manageCard" id="manage">
