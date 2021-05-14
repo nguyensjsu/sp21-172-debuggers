@@ -20,5 +20,7 @@ Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/jou
 
 
 **Week 4 Journals:**
+
+
 Jashan Dhillon- https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/jashan-week4.md
 
