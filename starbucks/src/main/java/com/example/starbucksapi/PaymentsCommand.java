@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-class PaymentsCommand {
+public class PaymentsCommand {
 
     private String action ;
 

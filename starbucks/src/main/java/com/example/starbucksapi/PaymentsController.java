@@ -33,6 +33,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import com.example.springcybersource.*;
+import com.example.StarbucksModel.PaymentModel;
+import com.example.StarbucksRepository.PaymentRepository;
 
 
 @Slf4j
@@ -51,25 +53,6 @@ public class PaymentsController {
     @Value("${cybersource.merchantid}") String merchantid;
 
     private CyberSourceAPI api = new CyberSourceAPI();
-
-    @Getter
-    @Setter
-    class Message{
-        private String msg;
-        public Message(String m){
-            msg = m;
-        }
-    }
-    class ErrorMessage{
-        private ArrayList<Message> messages = new ArrayList<Message>();
-        public void add(String msg){messages.add(new Message(msg));}
-        public ArrayList<Message> getMessages(){return messages;}
-        public void print(){
-            for(Message m : messages){
-                System.out.println(m.msg);
-            }
-        }
-    }
 
     @GetMapping
     public String getAction( @ModelAttribute("command") PaymentsCommand command, 
@@ -97,8 +80,6 @@ public class PaymentsController {
 
         CyberSourceAPI.debugConfig();
 
-        ErrorMessage msgs = new ErrorMessage();
-
         String fn = request.getParameter("firstname");
         String ln = request.getParameter("lastname");
         String adr = request.getParameter("address");
@@ -112,19 +93,21 @@ public class PaymentsController {
         String cvv = request.getParameter("cvv");
         String email = request.getParameter("email");
 
+        System.out.println("1234");
+
         boolean hasErrors = false;
-        if(fn.equals("")){hasErrors = true; msgs.add("First Name Required");}
-        if(ln.equals("")){hasErrors = true; msgs.add("Last Name Required");}
-        if(adr.equals("")){hasErrors = true; msgs.add("Address Required");}
-        if(city.equals("")){hasErrors = true; msgs.add("City Required");}
-        if(state.equals("")){hasErrors = true; msgs.add("State Required");}
-        if(zip.equals("")){hasErrors = true; msgs.add("Zip Required");}
-        if(pn.equals("")){hasErrors = true; msgs.add("Phone Number Required");}
-        if(cn.equals("")){hasErrors = true; msgs.add("Card Number Required");}
-        if(em.equals("")){hasErrors = true; msgs.add("Card Expiration Month Required");}
-        if(ey.equals("")){hasErrors = true; msgs.add("Card Expiration Year Required");}
-        if(cvv.equals("")){hasErrors = true; msgs.add("CVV Required");}
-        if(email.equals("")){hasErrors = true; msgs.add("Email Required");}
+        if(fn.equals("")){hasErrors = true; model.addAttribute( "message", "First Name Required");}
+        if(ln.equals("")){hasErrors = true; model.addAttribute( "message", "Last Name Required");}
+        if(adr.equals("")){hasErrors = true; model.addAttribute( "message", "Address Required");}
+        if(city.equals("")){hasErrors = true; model.addAttribute( "message", "City Required");}
+        if(state.equals("")){hasErrors = true; model.addAttribute( "message", "State Required");}
+        if(zip.equals("")){hasErrors = true; model.addAttribute( "message", "Zip Required");}
+        if(pn.equals("")){hasErrors = true; model.addAttribute( "message", "Phone Number Required");}
+        if(cn.equals("")){hasErrors = true; model.addAttribute( "message", "Card Number Required");}
+        if(em.equals("")){hasErrors = true; model.addAttribute( "message", "Card Expiration Month Required");}
+        if(ey.equals("")){hasErrors = true; model.addAttribute( "message", "Card Expiration Year Required");}
+        if(cvv.equals("")){hasErrors = true; model.addAttribute( "message", "CVV Required");}
+        if(email.equals("")){hasErrors = true; model.addAttribute( "message", "Email Required");}
         
 
 
@@ -144,43 +127,42 @@ public class PaymentsController {
 
         if(!zip.matches("\\d{5}")){
             hasErrors = true;
-            msgs.add("Invalid zip");
+            model.addAttribute( "message", "Invalid zip");
         }
         
         if(!m1.matches()){
             hasErrors = true;
-            msgs.add("Invalid phone numeber");
+            model.addAttribute( "message", "Invalid phone numeber");
         }
 
         if(!m2.matches()){
             hasErrors = true;
-            msgs.add("Invalid card numeber");
+            model.addAttribute( "message", "Invalid card numeber");
         }
 
         if(!month.contains(em)){
             hasErrors = true; 
-            msgs.add("Invalid exp month");
+            model.addAttribute( "message", "Invalid exp month");
         }
 
         if(!stateArr.contains(state)){
             hasErrors = true; 
-            msgs.add("Invalid State");
+            model.addAttribute( "message", "Invalid State");
         }
 
         if(!ey.matches("\\d{4}")){
             hasErrors = true;
-            msgs.add("Invalid exp year");
+            model.addAttribute( "message", "Invalid exp year");
         }
 
         if(!cvv.matches("\\d{3}")){
             hasErrors = true;
-            msgs.add("Invalid cvv");
+            model.addAttribute( "message", "Invalid cvv");
         }
 
         if(hasErrors){
-            msgs.print();
-            model.addAttribute("messages", msgs.getMessages());
-            return "CardsPage";
+            model.addAttribute("messages", "Invalid Input");
+            System.out.println(request.getParameter("firstname"));
         }
         
         /* Render View */

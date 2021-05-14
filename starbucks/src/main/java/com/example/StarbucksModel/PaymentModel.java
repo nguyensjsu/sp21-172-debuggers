@@ -1,4 +1,4 @@
-package com.example.starbucksapi;
+package com.example.StarbucksModel;
 
 import java.util.Objects;
 import javax.persistence.Entity;
@@ -8,10 +8,10 @@ import javax.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-// @Entity
+@Entity
 @Data
 @RequiredArgsConstructor
-class PaymentModel {
+public class PaymentModel {
     private @Id @GeneratedValue Long id;
 
     private String firstName;
