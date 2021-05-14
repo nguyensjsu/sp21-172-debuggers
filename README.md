@@ -13,7 +13,7 @@ Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/jou
 Johnny Vu - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/johnny-week2.md
 
 
-**Week 2 Journals:**
+**Week 3 Journals:**
 
 Jashan Dhillon - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/jashan-week3.md  
 Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/brielle-week3.md  
