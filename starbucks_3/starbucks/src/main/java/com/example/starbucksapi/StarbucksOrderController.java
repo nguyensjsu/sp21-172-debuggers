@@ -208,7 +208,7 @@ public class StarbucksOrderController {
         order.setStatus("Ready for Payment.");
         StarbucksOrder new_order = repository.save(order);
         orders.put(regid, new_order);
-        model.addAttribute("message", "The order was successful.");
+        model.addAttribute("message", "The order was created successfully.");
         model.addAttribute("drink", order.getDrink());
         model.addAttribute("milk", order.getMilk());
         model.addAttribute("size", order.getSize());
