@@ -7,13 +7,12 @@
 
 			.head{
 				display: block;
+				border-style:hidden;
 				text-align: center;
 			}
 
 			.logo{
-				display: block;
-				width: 15rem;
-				height: 15rem;
+				border-radius: 0%;
 
 			}
 			.showDrinks{
@@ -60,6 +59,21 @@
 				bottom: 0;
 				right: 0;
 			}
+			.double{
+				border-style: double;
+				margin-left: 30rem;
+				margin-right: 30rem;
+				padding-left: 30px;
+				padding-right: 30px;
+				padding-bottom: 30px;
+			}
+			.receiptvalues{
+				float: right;
+			}
+			img{
+				border-radius: 50%;
+			}
+			
 
 		</style>
 
@@ -98,56 +112,60 @@
 				element.preventDefault();
 			}
 
+			function changeStatus(){
+				var success = "Payment Successful.";
+				document.getElementById("status").innerHTML = success;
+			}
+
+
 		</script>
 		
 	</head>
 	<body>
 		<div class="head">
-			<h1>Starbucks Cashiers App</h1>
+			<img class="logo" align="left" style="padding-left:3rem" src="/img/logo-45x45.jpg" />
+			<span style="font-size: 40px; font-weight: bold;">Starbucks Cashier's App</span>
 		</div>
 		<br/>
-		<br/>
-		<div class="images" align="center">
-			<img class="logo" src="/img/Starbucks.jpg" />
-		</div>
+
 		
 		<div class="showDrinks">
-			<div class="item1">
+			<div class="item1" style="padding-bottom:20px">
 				<img class="img1" src="/img/caffeAmericano.jpg" />
 				<br/>
-				<a href="#" onclick="change1()" style="text-decoration: none; color: black; position: relative; left: 3.625rem;">Caffe Americano</a>
+				<a href="#" onclick="change1()" style="text-decoration: none; color: black; position: relative; left: 3.625rem;"><b>Caffe Americano</b></a>
 			</div>
-			<div class="item2" align="center">
+			<div class="item2" align="center" style="padding-bottom:20px">
 				<img class="img2" src="/img/caffelatte.jpg" />
 				<br/>
-				<a href="#" onclick="change2()"style="text-decoration: none; color: black;">Caffe Latte</a>
+				<a href="#" onclick="change2()"style="text-decoration: none; color: black;"><b>Caffe Latte</b></a>
 			</div>
-			<div class="item3">
+			<div class="item3" style="padding-bottom:20px">
 				<img class="img3" src="/img/caffemocha.jpg" />
 				<br/>
-				<a href="#" onclick="change3()" style="text-decoration: none; color: black; position: relative; left: 4.5rem;">Caffe Mocha</a>
+				<a href="#" onclick="change3()" style="text-decoration: none; color: black; position: relative; left: 4.5rem;"><b>Caffe Mocha</b></a>
 			</div>
-			<div class="item4" align="center">
+			<div class="item4" align="center" style="padding-bottom:20px">
 				<img class="img4" src="/img/cappuccino.jpg" />
 				<br/>
-				<a href="#" onclick="change4()" style="text-decoration: none; color: black;">Cappuccino</a>
+				<a href="#" onclick="change4()" style="text-decoration: none; color: black;"><b>Cappuccino</b></a>
 			</div>
-			<div class="item5">
+			<div class="item5" style="padding-bottom:20px">
 				<img class="img5" src="/img/caramelmacchiato.jpg" />
 				<br/>
-				<a href="#" onclick="change5()" style="text-decoration: none; color: black; position: relative; left: 3.3rem;">Caramel Macchiato</a>
+				<a href="#" onclick="change5()" style="text-decoration: none; color: black; position: relative; left: 3.3rem;"><b>Caramel Macchiato</b></a>
 			</div>
-			<div class="item6">
+			<div class="item6" style="padding-bottom:20px">
 				<img class="img6" src="/img/icedcoffee.jpg" />
 				<br/>
-				<a href="#" onclick="change6()" style="text-decoration: none; color: black; position: relative; left: 5rem;">Iced Coffee</a>
+				<a href="#" onclick="change6()" style="text-decoration: none; color: black; position: relative; left: 5rem;"><b>Iced Coffee</b></a>
 			</div>
 		</div>
 		<div class="choice" align="center" style="font-size: 1.5rem;">
 			<p>
 				Milk:
 				<select id="milks"  onchange="sMilk()" style="font-size: 1.5rem;">
-					<option id="wm" >WholeMilk</option>
+					<option id="wm" >Whole Milk</option>
 					<option id="soy">Soy</option>
 					<option id="al">Almond</option>
 					<option id="sk">Skim</option>
@@ -171,7 +189,7 @@
 				</div>
 				<div>
 					<label for="milk">Milk:</lable>
-					<input type="text" required="required" id="milk" name="milk" style="font-size: 1.2rem; border: none;" value="WholeMilk"/>
+					<input type="text" required="required" id="milk" name="milk" style="font-size: 1.2rem; border: none;" value="Whole Milk"/>
 				</div>
 				<div>
 					<label for="size">Size:</lable>
@@ -180,23 +198,36 @@
 				<input type="submit" value="Place Order" style="margin: 2rem; font-size: 1rem;"/>
 			</div>
 		</form>
-		<div align="center">
+		<div class="double">
+				<h3 style="text-align: center;">Receipt</h3>
 			<div>
-				<label for="total">Total:</lable>
-				<input type="text" id="total" name="total" style="font-size: 1.2rem; border: none;" />
+				<label>Drink:</lable>
+				<span class="receiptvalues" th:text="${drink}" />
 			</div>
 			<div>
-				<label for="register">Register:</lable>
-				<input type="text" id="register" name="register" style="font-size: 1.2rem; border: none;" />
+				<label>Milk:</lable>
+				<span class="receiptvalues" th:text="${milk}" />
 			</div>
 			<div>
-				<label for="status">Status:</lable>
-				<input type="text" id="status" name="status" style="font-size: 1.2rem; border: none;" />
+				<label>Size:</lable>
+				<span class="receiptvalues" th:text="${size}" />
+			</div>
+			<div>
+				<label>Total:</lable>
+				<span class="receiptvalues" th:text="${total}" />
+			</div>
+			<div>
+				<label>Register:</lable>
+				<span class="receiptvalues" th:text="${regid}" />
+			</div>
+			<div>
+				<label>Status:</lable>
+				<span id="status" class="receiptvalues" th:text="${status}" />
 			</div>
 		</div>
 
 		<div class="selections" align="center">
-			<input type="button" value="finish Order" style="margin: 2rem; font-size: 1rem;"/>
+			<input onclick="changeStatus()" type="button" value="Pay For Order" style="margin: 2rem; font-size: 1rem;"/>
 
 			<div>
 				<span th:text="${message}" />
