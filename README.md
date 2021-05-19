@@ -37,7 +37,7 @@ Zeyu Cheng - https://github.com/nguyensjsu/sp21-172-debuggers/blob/zeyu-branch/j
 
 Jashan Dhillon - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/jashan-week3.md  
 Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/brielle-week3.md  
-Johnny Vu - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/johnny-week3.md <br/>           
+Johnny Vu - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/johnny-week3.md           
 Zeyu Cheng - https://github.com/nguyensjsu/sp21-172-debuggers/blob/zeyu-branch/journals/Week%203%20journal%20-%20Zeyu%20Cheng.md
 
 **Week 4 Journals:**
