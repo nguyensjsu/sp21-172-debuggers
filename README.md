@@ -27,6 +27,16 @@ Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/jou
 
 
 **TEAM JOURNAL**
+Features implemented:
+- Cashiers Application
+- Backoffice
+- Online store
+- Integrations
+- Cloud Deployment
+Technical requirements 
+-
+-
+Individual Journals
 
 
 
