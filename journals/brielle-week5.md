@@ -1,6 +1,11 @@
 # Week 5 Journal: Brielle Purnell
 
 This week my API was added to the main working code. I worked on the Cashier's App view and controller. 
+The two commits that show this work are below:  
+**Added API**  
+https://github.com/nguyensjsu/sp21-172-debuggers/commit/34101fe625dad4e799818c374d5c1b36114c16a5  
+**Updated Cashier's App view**  
+https://github.com/nguyensjsu/sp21-172-debuggers/commit/b959d650335bcbe413178042bc4074fd30e453ef
 
 ## Fixed Console Output
 The first thing I did this week was fix the console output for creating an order.  
