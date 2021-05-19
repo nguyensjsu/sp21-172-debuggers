@@ -11,9 +11,17 @@ Features implemented:
 
 
 Technical requirements:
+- We used MYSQL database to store all the data
+- Used different spring frameworks like spring jpa, thymaleaf, validation and lombok
+- We used gradle version 5.6 and java version jdk 11
+- Used docker containers to deploy our application on google cloud
 
--
--
+
+
+
+
+
+
 Individual Journals
 
 
