@@ -26,4 +26,7 @@ Johnny Vu - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/
 Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/brielle-week4.md  
 
 
+**TEAM JOURNAL**
+
+
 
