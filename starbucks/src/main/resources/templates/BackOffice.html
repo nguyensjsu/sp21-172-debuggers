@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Back Office</title>
+</head>
+	<style type="text/css">
+		table{
+			line-height: 25px; 
+			text-align: center; 
+			border-collapse: collapse;
+			position: absolute;
+			left: 5rem;
+			top: 12rem;
+			
+		}
+		td {
+			width: 8rem;
+			height: 2rem;
+			text-align: center;
+		}
+		.cardbtn{
+			display: block;
+			width: 9.375rem;
+			height: 2rem;
+			border: 1px solid;
+			background-color: white;
+			border-radius: 1rem;
+			font-size:1rem;
+			position: absolute;
+			left: 5rem;
+			top: 8rem;
+		}
+		.changeForm{
+			width: 40rem;
+			height: 30rem;
+			background-color: #f7f7f7;
+			position: absolute;
+			right: 0rem;
+			top: 12rem;
+			font-size: 1.2rem;
+		}
+		.field{
+			height: 1.25rem;
+			width: 15rem;
+			font-size: 1rem;
+		}
+		.changeForm label{
+			display: inline-block;
+			float: left;
+			clear: left;
+			width: 13rem;
+			text-align: right;
+		}
+		
+		.changeForm input{
+			clear: both;
+		}
+		.btn{
+			width: 9.375rem;
+			height: 2rem;
+			background-color: white;
+			border: 1px solid;
+			border-radius:1rem;
+			font-size:1rem;
+			position: absolute;
+			left: 16rem;
+			bottom: 9rem;
+		}
+	</style>
+<body>
+	<div>
+		<br/>
+		<h1 align="center">Back Office</h1>
+		<br/>
+		<form method="post" action="/newcard">
+			<input class="cardbtn" type="submit" value="Create new Card" action="/newcard">
+		</form>
+		<br/>
+		<table border="1" cellspacing="0">
+			<tr>
+				<td>ID</td>
+				<td>CardNumber</td>
+				<td>CardCode</td>
+				<td>Balance</td>
+				<td>Activated</td>
+				<td>Status</td>
+			</tr>
+			<tr th:each="item: ${tableView}">
+				<td th:text="${item.id}" />
+				<td th:text="${item.cardNumber}" />
+				<td th:text="${item.cardCode}" />
+				<td th:text="${item.balance}" />
+				<td th:text="${item.activated}" />
+				<td th:text="${item.status}" />
+			</tr>
+		</table>
+	</div>
+	<div class="changeForm">
+		<form class="form" method="post" action="/cards">
+			<h3 align="center">Change the table information</h3>
+			<br/>
+			<label for="id">ID:&nbsp &nbsp</label>
+			<input class="field" type="text" id="id" name="id"/>
+			<br/><br/>
+			<label for="balance">Balance:&nbsp &nbsp</label>
+			<input class="field" type="text" id="balance" name="balance"/>
+			<br/><br/>
+			<label for="activated">Activated:&nbsp &nbsp</label>
+			<input class="field" type="text" id="activated" name="activated"/>
+			<br/><br/>
+			<label for="status">Status:&nbsp &nbsp</label>
+			<input class="field" type="text" id="status" name="status"/>
+			<br/><br/>
+			<input class="btn" id="submit" type="submit" value="Submit Changes"/>
+			<br/><br/><br/><br/>
+			<div style="display: block" align="center">
+				<span th:text="${massage}" />
+			</div>
+		</form>
+		
+	</div>
+</body>
+</html>

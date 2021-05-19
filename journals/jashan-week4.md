@@ -1,0 +1,4 @@
+For this week I was able to start working on the serverside of the cashiers application, I was able to create a Cashiers command that took in variables needed. The variables were the size,type of milk, drink and name of the order. One difficulty I had was the overall though process when it came to this. Is the cashiers command different from the order command? We will figure this out as a group this weekend and either merge the order and casier that we have or use both seperatly. The card I worked on this week was again the cashiers app card.![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/Weekly%20cards/Jashan-week2-card.png)
+
+
+The link to my commit is https://github.com/nguyensjsu/sp21-172-debuggers/tree/main/starbucks_app/src/main/java/com/example/starbucks/cashiers and this shows the source code for what I was able to do, the controller is empty right now because of decisions that need to be made on order vs cashier
