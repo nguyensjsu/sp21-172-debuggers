@@ -1,4 +1,22 @@
 # Team Project Debuggers 
+ 
+**TEAM JOURNAL**
+
+Features implemented:
+- Cashiers Application
+- Backoffice
+- Online store
+- Integrations
+- Cloud Deployment
+
+
+Technical requirements:
+
+-
+-
+Individual Journals
+
+
 **Week 1 Journals:**
 
 Jashan Dhillon-  https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/jashan-week1.md  
@@ -23,24 +41,7 @@ Johnny Vu - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/
 
 Jashan Dhillon- https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/jashan-week4.md  
 Johnny Vu - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/johnny-week4.md  
-Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/brielle-week4.md  
-
-
-**TEAM JOURNAL**
-
-Features implemented:
-- Cashiers Application
-- Backoffice
-- Online store
-- Integrations
-- Cloud Deployment
-
-
-Technical requirements:
-
--
--
-Individual Journals
+Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/brielle-week4.md 
 
 
 
