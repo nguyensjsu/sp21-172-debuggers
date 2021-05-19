@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+</body>
+</html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.head{
+				margin: 1.25rem 3.125rem;
+				width: 31.25rem;
+				height: 5rem;
+			}
+			.head li{
+				float: left;
+				list-style: none;
+			}
+			.head li img{
+				display: block;
+				height: 5rem;
+				width: 5rem;
+			}
+			.head li a{
+				display: block;
+				width: 6.25rem;
+				height: 5rem;
+				text-align: center;
+				text-decoration: none;
+				line-height: 5rem;
+				color: black;
+				font-size: 1.25rem;
+				padding-left: 1.5625rem;
+			}
+			.head li a:hover{
+				color: #00a862;
+			}
+			.view1{
+				display: block;
+				width: 18.75rem;
+				position: absolute;
+				left: 8.75rem;
+				top: 25rem;
+			}
+			.view1 li{
+				list-style: none;
+			}
+			.view1 b{
+				display: block;
+				margin-bottom: 1.25rem;
+				font-size: 1.5625rem;
+			}
+			.view1 li a{
+				display: block;
+				width: 6.25rem;
+				height: 3.125rem;
+				text-align: left;
+				text-decoration: none;
+				color: gray;
+			}
+			.view1 li a:hover{
+				color: #00a862;
+			}
+			.showCard{
+				font-family: Courier New, monospace;
+				display: block;
+				width: 71.875rem;
+				height: 50.9375rem;
+				position: absolute;
+				right:0;
+				top: 7.5625rem;
+				border-left: #e2e2e2 solid 0.0625rem;
+				background-color: #f7f7f7;
+			}
+			.showCard img{
+				position: absolute;
+				top: 8.75rem;
+				left: 19.375rem;
+			}
+			.showCard h1{
+				position: absolute;
+				top: 5.625rem;
+				left: 20.5rem;
+				font-size: 45px;
+			}
+			.showCard a{
+				position: absolute;
+				top: 6.9rem;
+				left: 47.3rem;
+				font-weight:bold;
+				text-decoration: none;
+				color: darkgreen;
+				font-family: Comic Sans MS, Comic Sans, cursive;
+				font-size: 1.25rem;
+			}
+			.showCard .btn1{
+				position: absolute;
+				bottom: 12rem;
+				left: 20.9rem;
+				width: 14rem;
+				height: 8rem;
+				border-radius: 0.9375rem;
+				border: dashed #808080 0.05rem;
+			}
+			.btn2{
+				font-family: Noto Sans, sans-serif;
+				width: 9.375rem;
+				height: 3.125rem;
+				background-color: #00a862;
+				border: none;
+				border-radius:3.125rem;
+				font-size:1.25rem;
+				font-weight:bold;
+				color: white;
+				position: absolute;
+				bottom: 1.25rem;
+				right:1.875rem;
+			}
+			.btn2:hover{
+				background-color: #006400;
+			}
+
+			.btn3{
+				font-family: Noto Sans, sans-serif;
+				width: 9.375rem;
+				height: 3.125rem;
+				background-color: #00a862;
+				border: none;
+				border-radius:3.125rem;
+				font-size:1.25rem;
+				font-weight:bold;
+				color: white;
+				position: absolute;
+				bottom: 5rem;
+				right:1.875rem;
+			}
+			.btn3:hover{
+				background-color: #006400;
+			}
+
+			.msg{
+				position: absolute;
+				bottom: 20rem;
+				right:20rem;
+			}
+			.refresh{
+				position: absolute;
+				top: 7rem;
+				left: 31rem;
+			}
+
+			.selection{
+				display: block;
+				font-weight: bold;
+				font-size: 1.2rem;
+				position: absolute;
+				left: 20.5rem;
+				top: 1.5rem;
+			
+			}
+			.info{
+				position: absolute;
+				top: 7rem;
+				right: 20rem;
+				font-size: 1.5rem;
+			}
+			
+
+		</style>
+		<script type="text/javascript">
+			function deleteCard(){
+				var x = document.getElementById("selectCard").value;
+				document.location = "/card/" + x;
+			}
+
+			function getBalence(){
+				var x = document.getElementById("selectCard").value;
+				if(x!="")
+					document.location = "/balance/" + x;
+				else{
+					var span = document.getElementById("log");
+					log.textContent = "Please select a Card";
+				}
+			}
+
+			function cardPayment(){
+				var x = document.getElementById("selectCard").value;
+				if(x!="")
+					document.location = "/payment/" + x;
+				else{
+					var span = document.getElementById("log");
+					log.textContent = "Please select a Card";
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		<div class="head">
+			<ul>
+				<li><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png" /></li>
+<!-- 				<li> <a href="#"><b style="font-family:Sans-serif">Order</b></a> </li> -->
+				<li> <a href="/"><b style="font-family:Sans-serif">Cards</b></a> </li>
+			</ul>
+		</div>
+		
+		<hr/>
+		<div class="Cards" id="cards">
+			<div class="view1" id="view1">
+				<ul>
+					<li><h1 style="font-family:Sans-serif; margin-bottom: 20px;">Startbucks Card</h1></li>
+					<li> <a href="/"><b style="font-size:20px; font-family:Sans-serif">Pay</b></a> </li>
+					<li> <a href="/cardpage"><b style="font-size:20px; font-family:Sans-serif">Add</b></a> </li>
+				</ul>			
+			</div>
+			 
+			<div class="showCard" id="show">
+				<div class="selection">
+					<p>Change to view different Card</p>
+						<select th:name="selectCard" th:id="selectCard">
+							<option value="">--select--</option>
+							<option th:each="card:${cardList}" th:value="${card.cardNumber}" th:utext="${card.cardNumber}" />
+						</select>
+				</div>
+				<!-- <h1 th:text="${'$' + balance}"></h1> -->
+				<h1 th:text="${balance} ?: _">$0.0</h1>
+				<span class="info" th:text="${cardNumber} ?: _"> </span>
+				<input class="refresh" type="image" id="refresh" src="/img/refresh.png" onclick="getBalence()" />
+				<img src="/img/show.png" />
+				<input class="btn1" type="button" value="Add Card" onclick="document.location='/cardpage'"/>
+				<input class="btn2" type="button" value="Add Money" onclick="cardPayment()"/>
+				<input class="btn3" type="button" value="Delete Card" onclick="deleteCard()" />
+				<div class="msg">
+				<span id="log" th:text="${message}" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
