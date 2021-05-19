@@ -3,7 +3,7 @@
 **TEAM JOURNAL**
 
 Features implemented:
-- Cashiers Application: For the cashiers application we created an app that visually lets the cashier choose whatever drink the customer would like.
+- Cashiers Application: For the cashiers application we created an app that visually lets the cashier choose whatever drink the customer would like. The customer can pick from 6 different drinks and the cashier just clicls on the drink image to select it. The cashier can then customize the drink. The drink can have a different array of milks like soy, whole milk, 2% and almond milk. Then the price will be calculated it for the cashier and displayed in the reciept as well as display what register they are on then the order can be placed.
 - Backoffice
 - Online store
 - Integrations
