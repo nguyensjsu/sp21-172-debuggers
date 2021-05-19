@@ -3,7 +3,7 @@
 **TEAM JOURNAL**
 
 Features implemented:
-- Cashiers Application
+- Cashiers Application: For the cashiers application we created an app that visually lets the cashier choose whatever drink the customer would like.
 - Backoffice
 - Online store
 - Integrations
