@@ -111,7 +111,11 @@ Lastly this shows the databases, these hold the order information, customer info
  
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%202.PNG)
 - This page of the data base shows successful payments by each user.
+- The users' personal information such as name, address, credit card information will be stored here.
+- This database can allow employees to check a specific user when needed.
+ 
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%203.PNG)
+- Our last database shows
 For the gradle and spring frameworks we used, the image below shows them.
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/gradle.png)
 
