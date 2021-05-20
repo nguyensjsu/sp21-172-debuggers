@@ -96,6 +96,7 @@ This is the basic online store
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/online%20store%201.PNG)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/add%20card.PNG)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/payment%20page.PNG)
+- 
 The cybersource integration 
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber1.png)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber2.png)   
@@ -104,7 +105,12 @@ The online store and back office
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cashier%202.PNG)
 Lastly this shows the databases, these hold the order information, customer information and the card information that is shared to both the backoffice and the online store!
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%201.PNG)
+- The image above shows the list of cards in the database.
+- The database itself shows many important points of information such as the card number, the balance, and whether the card is active to name a few.
+- Additonally, cards will automatically be removed upon the user selecting "Delete Card" on the online store page.
+ 
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%202.PNG)
+- This page of the data base shows successful payments by each user.
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%203.PNG)
 For the gradle and spring frameworks we used, the image below shows them.
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/gradle.png)
