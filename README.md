@@ -91,16 +91,19 @@ Technical requirements:
 
 
 
-Screenshots  :
-This is the basic online store
+Screenshots: 
+This is the basic Online Store
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/online%20store%201.PNG)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/add%20card.PNG)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/payment%20page.PNG)
 - Our online store page which includes adding and deleting starbucks cards as well as adding more credits into a starbuck card.
-The cybersource integration 
+- With cybersource integration, users will be informed of an error in inputs such as the incorrect amount of digits for the CVV.
+ 
+The Cybersource Integration
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber1.png)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber2.png)   
-The online store and back office
+ 
+The Online Store and Back Office
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cashiers%201.PNG)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cashier%202.PNG)
 - The cashier app's front page which displays all the available drinks that users can purchase.
