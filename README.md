@@ -98,7 +98,7 @@ This is the basic Online Store
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/payment%20page.PNG)
 - Our online store page which includes adding and deleting starbucks cards as well as adding more credits into a starbuck card.
 - With cybersource integration, users will be informed of an error in inputs such as the incorrect amount of digits for the CVV.
- 
+
 The Cybersource Integration
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber1.png)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber2.png)   
