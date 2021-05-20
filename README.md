@@ -96,13 +96,17 @@ This is the basic online store
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/online%20store%201.PNG)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/add%20card.PNG)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/payment%20page.PNG)
-- 
+- Our online store page which includes adding and deleting starbucks cards as well as adding more credits into a starbuck card.
 The cybersource integration 
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber1.png)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber2.png)   
 The online store and back office
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cashiers%201.PNG)
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cashier%202.PNG)
+- The cashier app's front page which displays all the available drinks that users can purchase.
+- Upon selecting a drink, users will be required to input what type of milk they want and the size of their drink.
+- Once the customer confirms their order, the order will directly go to the database.
+ 
 Lastly this shows the databases, these hold the order information, customer information and the card information that is shared to both the backoffice and the online store!
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%201.PNG)
 - The image above shows the list of cards in the database.
@@ -115,7 +119,10 @@ Lastly this shows the databases, these hold the order information, customer info
 - This database can allow employees to check a specific user when needed.
  
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%203.PNG)
-- Our last database shows
+- Our last database shows any and all confirmed orders from the cashier's app.
+- Orders will vary from the different type of drinks to size to the type of milk.
+- Every order processed will go through to this database.
+ 
 For the gradle and spring frameworks we used, the image below shows them.
 ![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/gradle.png)
 
