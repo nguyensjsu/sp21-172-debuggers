@@ -129,5 +129,7 @@ Johnny Vu - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/
 Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/brielle-week4.md   
 Zeyu Cheng - https://github.com/nguyensjsu/sp21-172-debuggers/blob/zeyu-branch/journals/Week%204%20journal%20-%20Zeyu%20Cheng.md
 
+**Week 5 Journals:**
 
+Brielle Purnell - https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/journals/brielle-week5.md 
 
