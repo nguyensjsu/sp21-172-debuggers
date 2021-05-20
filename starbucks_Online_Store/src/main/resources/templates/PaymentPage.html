@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+</body>
+</html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.head{
+				margin: 1.25rem 3.125rem;
+				width: 31.25rem;
+				height: 5rem;
+			}
+			.head li{
+				float: left;
+				list-style: none;
+			}
+			.head li img{
+				display: block;
+				height: 5rem;
+				width: 5rem;
+			}
+			.head li a{
+				display: block;
+				width: 6.25rem;
+				height: 5rem;
+				text-align: center;
+				text-decoration: none;
+				line-height: 5rem;
+				color: black;
+				font-size: 1.25rem;
+				padding-left: 1.5625rem;
+			}
+			.head li a:hover{
+				color: #00a862;
+			}
+			
+			.view2{
+				display: block;
+				width: 25rem;
+				height: 18.75rem;
+				line-height: 18.75rem;
+				position: absolute;
+				left: 8.75rem;
+				top: 21.875rem;
+			}
+			
+			.payment{
+				font-family: Courier New, monospace;
+				display: block;
+				width: 71.875rem;
+				height: 50.9375rem;
+				position: absolute;
+				right:0;
+				top: 7.5625rem;
+				border-left: #e2e2e2 solid 0.0625rem;
+				background-color: #f7f7f7;
+			}
+			.btn{
+				text-align: center;
+				font-family: Noto Sans, sans-serif;
+				width: 12em;
+				height: 3.125rem;
+				background-color: #00a862;
+				border: none;
+				border-radius:3.125rem;
+				font-size:1.25rem;
+				font-weight:bold;
+				color: white;
+				position: absolute;
+				bottom: 0rem;
+				left: 0rem;
+			}
+			.btn:hover {
+				background-color: darkgreen;
+			}
+
+			.btn1{
+				text-align: center;
+				font-family: Noto Sans, sans-serif;
+				width: 8em;
+				height: 3.125rem;
+				background-color: #00a862;
+				border: none;
+				border-radius:3.125rem;
+				font-size:1.25rem;
+				font-weight:bold;
+				color: white;
+				position: absolute;
+				bottom: 6.45rem;
+				left: 40rem;
+			}
+			.btn1:hover {
+				background-color: darkgreen;
+			}
+
+			.content{
+				
+				display: block;
+				width: 50rem;
+				height: 40rem;
+				text-align: left;
+				position: absolute;
+				top: 6rem;
+				left: 17rem;
+			}
+			.content label{
+				margin-bottom: 1.5rem;
+				font-weight:bold;
+				font-size: 1.125rem;
+			}
+			.content input{
+				margin-bottom: 1.5rem;
+			}
+			.content p{
+				margin-bottom: 1.5rem;
+				font-weight:bold;
+				font-size: 1.125rem;
+			}
+		</style>
+		<script type="text/javascript">
+			function updateCard(){
+				var x = document.getElementById("number").innerHTML;
+				var y = document.getElementById("amount").value;
+				window.location.href="/card/" + x + "/" + y;
+			}
+		</script>
+		
+	</head>
+	<body>
+		<div class="head">
+			<ul>
+				<li><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png" /></li>
+<!-- 				<li> <a href="#"><b style="font-family:Sans-serif">Order</b></a> </li> -->
+				<li> <a href="/"><b style="font-family:Sans-serif">Cards</b></a> </li>
+			</ul>
+		</div>
+		
+		<hr/>
+		
+		<div class="view2" id="view2">
+			<h1>Add Payment Method</h1>
+		</div>
+		
+		<div class="payment" id="payment">
+			<form class="content" method="post" action="" th:object="${command}">
+				<div>
+					<p>
+						Starbucks Card Number:
+						<span id="number" th:text="${cardNum}"></span>
+						Load this Amount:
+						<select id="amount" name="transactionAmount">
+							<option value="20">$20</option>
+							<option value="30">$30</option>
+							<option value="50">$50</option>
+							<option value="80">$80</option>
+							<option value="100">$100</option>
+						</select>
+					</p >
+					<label for="fn">First Name:</lable>
+					<input type="text" required="required" id="fn" name="firstname" th:field="*{firstname}"/>
+					<br />
+					<label for="ln">Last Name:</label>
+					<input type="text" required="required" id="ln" name="lastname" th:field="*{lastname}"/>
+					<br />
+					<label for="adr">Address:</label>
+					<br />
+					<textarea style="OVERFLOW:hidden; width: 31.25rem; height: 4rem; font-size: 1rem; margin-bottom: 1.5rem;" id="adr" required="required" name="address" th:field="*{address}"></textarea>
+					<br />
+					<label for="city">City:</label>
+					<input type="text" required="required" id="city" name="city" th:field="*{city}"/>
+					<label for="state">State:</label>
+					<input type="text" required="required" id="state" name="state" placeholder="xx" th:field="*{state}"/>
+					<label for="zip">Zip:</label>
+					<input type="text" required="required" id="zip" name="zip" placeholder="5 digital zip" th:field="*{zip}"/>
+					<br />
+					<label for="pn">Phone Number:</label>
+					<input type="text" required="required" id="pn" name="phone" th:field="*{phone}"/>
+					<br />
+					<label for="cn">Credit Card Number:</label>
+					<input type="text" required="required" id="cn" placeholder="xxxx xxxx xxxx xxxx" name="cardnum" th:field="*{cardnum}"/>
+					<br />
+					<label for="em">Exp Month:</label>
+					<input type="text" required="required" id="em" style="width: 2rem;" placeholder="xx" name="cardexpmon" th:field="*{cardexpmon}"/>
+					<label for="ey">Exp Year:</label>
+					<input type="text" required="required" id="ey" style="width: 4rem;" placeholder="xxxx" name="cardexpyear" th:field="*{cardexpyear}"/>
+					<label for="cvv">CVV:</label>
+					<input type="text" required="required" id="cvv" style="width: 4rem;" name="cardcvv" th:field="*{cardcvv}"/>
+					<br />
+					<lable for="email" style="margin-bottom: 0;">Email</lable>
+					<input type="text" required="required" id="email" name="email" th:field="*{email}"/>
+				</div>
+				<input type="submit" name="action" id="process-payment" value="Submit Your Payment" class="btn" />
+				<div th:if="${not#lists.isEmpty(messages)}">
+          			<div class="messages">
+            			<ul th:each="m : ${messages}">
+               				<li th:text="${m.msg}" />
+            			</ul>
+          			</div>
+          		</div>
+          
+          		<div class="message">
+          			<span id = "message" th:text="${message}" />
+          		</div>
+
+			</form>
+			<button class="btn1" onclick="updateCard()">Refresh Card</button>
+		</div>
+		
+		
+	</body>
+</html>

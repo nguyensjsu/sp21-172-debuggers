@@ -4,7 +4,7 @@
 
 Features implemented:
 - Cashiers Application: For the cashiers application we created an app that visually lets the cashier choose whatever drink the customer would like. The customer can pick from 6 different drinks and the cashier just clicls on the drink image to select it. The cashier can then customize the drink. The drink can have a different array of milks like soy, whole milk, 2% and almond milk. Then the price will be calculated it for the cashier and displayed in the reciept as well as display what register they are on then the order can be placed.
-- Backoffice
+- Backoffice: The backoffice is connected to the same application as the cashiers app. Once you are in the cashiers you can go to to the backoffice and from there you can look at the different cards and add money or subtract money from them. You can activate cards from there. Only when cards are activated on the backoffice will they be able to be looked at on the online store.
 - Rest API: The one used is shown below
 ```
 POST    /order/register/{regid}
@@ -80,15 +80,37 @@ DELETE 	/orders
 		}
 ```  
 - Online store: The online store allows the customer to take care of their needs when it comes to payment methods. The online store allows the customer to add a card and remove a card. The card can be refilled and you can add money using a verified credit card. The verification is done using cybersource and it will only work when a cybersource approved card is used. You can even select between different cards. When you enter an invalid card information it will give you an error and will only be sent to the MySql database if it is all approved.
-- Integrations
-- Cloud Deployment
+- Integrations: We used cybersource to validate all the card information that was inputted
 
 
 Technical requirements:
 - We used MYSQL database to store all the data
 - Used different spring frameworks like spring jpa, thymaleaf, validation and lombok
 - We used gradle version 5.6 and java version jdk 11
-- Used docker containers to deploy our application on google cloud
+- Used docker containers to deploy our application on google cloud but would not run do to the pods crashing
+
+
+
+Screenshots  :
+This is the basic online store
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/online%20store%201.PNG)
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/add%20card.PNG)
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/payment%20page.PNG)
+The cybersource integration 
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber1.png)
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cyber2.png)   
+The online store and back office
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cashiers%201.PNG)
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/cashier%202.PNG)
+Lastly this shows the databases, these hold the order information, customer information and the card information that is shared to both the backoffice and the online store!
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%201.PNG)
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%202.PNG)
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/db%203.PNG)
+For the gradle and spring frameworks we used, the image below shows them.
+![alt text](https://github.com/nguyensjsu/sp21-172-debuggers/blob/main/screenshots/gradle.png)
+
+
+
 
 
 
